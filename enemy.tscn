@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmf4qgivs6lcf"]
+
+[ext_resource type="Script" path="res://enemymove.gd" id="1_lgy7p"]
+[ext_resource type="Texture2D" uid="uid://jkgf47q71ra1" path="res://man.png" id="2_af200"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6vai"]
+size = Vector2(102, 156)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_32u4h"]
+radius = 82.0061
+
+[node name="enemy" type="CharacterBody2D"]
+position = Vector2(1, -124)
+collision_layer = 8
+collision_mask = 15
+script = ExtResource("1_lgy7p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_af200")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 10)
+shape = SubResource("RectangleShape2D_l6vai")
+
+[node name="manArea2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="manArea2D"]
+position = Vector2(-10, 12)
+shape = SubResource("CircleShape2D_32u4h")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -48.0
+offset_top = -88.0
+offset_right = 52.0
+offset_bottom = -78.0
+max_value = 5000.0
+step = 1.0
+value = 5000.0
+show_percentage = false
+
+[connection signal="body_entered" from="manArea2D" to="." method="_on_area_2d_body_entered"]

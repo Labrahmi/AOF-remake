@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://duh0tnrw4v4s"]
+
+[ext_resource type="Script" path="res://enemyBase.gd" id="1_3i0kk"]
+[ext_resource type="Texture2D" uid="uid://cohj6yg7p3vly" path="res://enemyBase.png" id="2_se8ef"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rw5e6"]
+size = Vector2(509, 518)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bq6ca"]
+size = Vector2(629.825, 596.491)
+
+[node name="enemyBase" type="StaticBody2D"]
+position = Vector2(0, -146)
+scale = Vector2(0.57, 0.57)
+script = ExtResource("1_3i0kk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_se8ef")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_rw5e6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-10.5262, -43.8596)
+shape = SubResource("RectangleShape2D_bq6ca")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -121.053
+offset_top = -405.263
+offset_right = 128.947
+offset_bottom = -355.263
+max_value = 1000.0
+step = 1.0
+value = 1000.0
+show_percentage = false
