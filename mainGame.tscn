@@ -95,7 +95,6 @@ show_percentage = false
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -177)
 offset = Vector2(0, -7.8)
-zoom = Vector2(0.56, 0.56)
 
 [node name="Button" type="Button" parent="."]
 offset_left = 498.0
@@ -106,7 +105,6 @@ focus_mode = 0
 text = "man"
 
 [node name="Timer" type="Timer" parent="."]
-one_shot = true
 autostart = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

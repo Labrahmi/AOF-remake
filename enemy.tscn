@@ -36,9 +36,9 @@ offset_left = -48.0
 offset_top = -88.0
 offset_right = 52.0
 offset_bottom = -78.0
-max_value = 5000.0
+max_value = 300.0
 step = 1.0
-value = 5000.0
+value = 300.0
 show_percentage = false
 
 [connection signal="body_entered" from="manArea2D" to="." method="_on_area_2d_body_entered"]

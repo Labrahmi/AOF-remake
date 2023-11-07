@@ -5,7 +5,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var SPEED = -100.0
 const JUMP_VELOCITY = -400.0
-var health = 5000
+var health = 300
 var healthBar
 var area
 

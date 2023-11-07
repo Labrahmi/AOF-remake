@@ -15,6 +15,11 @@ run/main_scene="res://mainGame.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=3072
+window/size/viewport_height=2000
+
 [dotnet]
 
 project/assembly_name="impossibole"
